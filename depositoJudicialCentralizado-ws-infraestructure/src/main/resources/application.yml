@@ -1,0 +1,35 @@
+#spring:
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        "[transaction.coordinator_class]": jta
+#        "[jta.platform]": org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform
+#    open-in-view: false
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    url: /v3/api-docs
+  paths-to-match: /**
+
+
+logging:
+  level:
+    "[pe.go.pj]": DEBUG
+    "[org.springframework.web]": DEBUG
+    "[org.springdoc]": DEBUG
+    "[org.springframework.security]": DEBUG
+    "[org.springframework.data]": DEBUG
+    "[org.hibernate.SQL]": DEBUG
+    "[org.hibernate.type.descriptor.sql]": TRACE
+
