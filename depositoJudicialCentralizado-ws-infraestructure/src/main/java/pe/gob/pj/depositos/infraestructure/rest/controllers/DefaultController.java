@@ -16,10 +16,8 @@ public class DefaultController implements Default{
         var res = new AplicativoResponse();
 
         res.setCodigoOperacion("546565416516");
-        var healthcheck = new Aplicativo();
-        healthcheck.setNombre(ProjectConstants.Aplicativo.NOMBRE);
-        healthcheck.setEstado("Disponible");
-        healthcheck.setVersion(ProjectConstants.Aplicativo.VERSION);
+        var healthcheck = new Aplicativo(ProjectConstants.Aplicativo.NOMBRE,"Disponible",ProjectConstants.Aplicativo.VERSION);
+
         res.setData(healthcheck);
 
         return new ResponseEntity<>(res, getHttpHeader(formatoRespuesta), HttpStatus.OK);
