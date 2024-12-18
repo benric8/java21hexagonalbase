@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySources;
 import java.io.Serializable;
 
 @Configuration
-@PropertySources(value = {@PropertySource("classpath:depositoJudicialCentralizado.properties")})
+@PropertySources(value = {@PropertySource("classpath:depositoJudicialCentralizado-ws.properties")})
 public class ProjectProperties implements Serializable {
     private static final long serialVersionUID = 1L;
 

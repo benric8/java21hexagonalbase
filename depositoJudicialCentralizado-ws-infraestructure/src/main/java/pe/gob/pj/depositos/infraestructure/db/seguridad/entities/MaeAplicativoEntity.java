@@ -23,16 +23,16 @@ public class MaeAplicativoEntity extends AuditoriaEntity implements Serializable
 
     @Id
     @Column(name = "n_aplicativo")
-    Integer nAplicativo;
+    Integer numAplicativo;
 
     @Column(name = "c_aplicativo")
-    String cAplicativo;
+    String codAplicativo;
 
     @Column(name = "x_aplicativo")
-    String xAplicativo;
+    String aplicativo;
 
     @Column(name = "x_descripcion")
-    String xDescripcion;
+    String descripcion;
 
     // bi-directional many-to-one association to MaeTipoAplicativo
     @ManyToOne

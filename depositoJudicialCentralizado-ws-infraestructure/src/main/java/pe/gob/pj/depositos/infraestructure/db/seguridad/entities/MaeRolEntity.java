@@ -19,16 +19,16 @@ import java.util.List;
 public class MaeRolEntity extends AuditoriaEntity implements Serializable {
     @Id
     @Column(name = "n_rol")
-    Integer nRol;
+    Integer numRol;
 
     @Column(name = "c_rol")
-    String cRol;
+    String codRol;
 
     @Column(name = "x_descripcion")
-    String xDescripcion;
+    String descripcion;
 
     @Column(name = "x_rol")
-    String xRol;
+    String rol;
 
     // bi-directional many-to-one association to MaeOperacion
     @OneToMany(mappedBy = "maeRol")

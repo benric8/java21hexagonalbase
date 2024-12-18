@@ -19,7 +19,7 @@ public class MaeRolUsuarioEntity extends AuditoriaEntity implements Serializable
     private static final long serialVersionUID = 1L;
     @Id
     @Column(name = "n_rol_usuario")
-    Integer nRolUsuario;
+    Integer numRolUsuario;
 
     // bi-directional many-to-one association to MaeRol
     @ManyToOne

@@ -10,7 +10,7 @@
         <module name="depositoJudicialCentralizado-ws-usecase" />
         <module name="depositoJudicialCentralizado-ws-domain" />
       </profile>
-      <profile name="Annotation profile for Servicio Prueba API REST" enabled="true">
+      <profile name="Annotation profile for Servicio depositos API REST" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

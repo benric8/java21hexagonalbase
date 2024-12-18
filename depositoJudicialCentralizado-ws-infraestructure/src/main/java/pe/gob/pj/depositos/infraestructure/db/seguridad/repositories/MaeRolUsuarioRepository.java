@@ -25,11 +25,11 @@ public interface MaeRolUsuarioRepository extends JpaRepository<MaeRolUsuarioEnti
       AND r.activo = '1'
       AND ap.activo = '1'
       AND c.activo = '1'
-      AND u.cUsuario = :cUsuario
-      AND u.cClave = :cClave
-      AND r.cRol = :codRol
-      AND ap.nAplicativo = :nAplicativo
-      AND c.cCliente = :cCliente""")
+      AND u.codUsuario= :cUsuario
+      AND u.clave = :cClave
+      AND r.codRol = :codRol
+      AND ap.numAplicativo = :nAplicativo
+      AND c.codCliente = :cCliente""")
     Optional<MaeUsuarioEntity> autenticarUsuario(@Param("cUsuario") String usuario,
                                                  @Param("cClave") String clave, @Param("codRol") String rol, @Param("cCliente") String cliente,
                                                  @Param("nAplicativo") Integer aplicativo);
@@ -44,8 +44,8 @@ public interface MaeRolUsuarioRepository extends JpaRepository<MaeRolUsuarioEnti
       AND ru.activo = '1'
       AND r.activo = '1'
       AND op.activo = '1'
-      AND r.cRol = :codRol
-      AND u.cUsuario = :cUsuario""")
+      AND r.codRol = :codRol
+      AND u.codUsuario = :cUsuario""")
     List<MaeOperacionEntity> obtenerAccesoMetodos(@Param("cUsuario") String usuario,
                                                   @Param("codRol") String rol);
 

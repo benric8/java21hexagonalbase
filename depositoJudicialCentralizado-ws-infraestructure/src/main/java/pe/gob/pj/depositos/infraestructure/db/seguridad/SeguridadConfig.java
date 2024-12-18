@@ -30,10 +30,9 @@ public class SeguridadConfig {
 
     // CONEXION CON LA BASE DE DATOS SEGURIDAD
     @Bean(name = "cxSeguridadDS")
-    @Primary
     DataSource seguridadDataSource() throws NamingException {
         return (DataSource) new InitialContext()
-                .lookup("java:jboss/datasources/servicioPruebaAPISeguridad");
+                .lookup("java:jboss/datasources/serviciodepositosAPISeguridad");
     }
 
     @Bean(name = "seguridadEntityManagerFactory")
@@ -46,7 +45,6 @@ public class SeguridadConfig {
     }
 
     //Para usar transacciones
-    @Primary
     @Bean(name = "txManagerSeguridad")
     PlatformTransactionManager seguridadTransactionManager(
             @Qualifier("seguridadEntityManagerFactory") EntityManagerFactory entityManagerFactory) {
@@ -54,7 +52,6 @@ public class SeguridadConfig {
     }
 
     //Para usar hibernate con SessionFactory
-    @Primary
     @Bean(name = "sessionSeguridad")
     SessionFactory sessionFactorySeguridad(
             @Qualifier("seguridadEntityManagerFactory") EntityManagerFactory emf) {

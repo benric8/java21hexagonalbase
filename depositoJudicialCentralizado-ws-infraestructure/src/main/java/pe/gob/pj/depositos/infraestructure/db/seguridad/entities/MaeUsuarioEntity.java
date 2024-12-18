@@ -20,16 +20,16 @@ import java.util.List;
 public class MaeUsuarioEntity extends AuditoriaEntity implements Serializable {
     @Id
     @Column(name = "n_usuario")
-    Integer nUsuario;
+    Integer numUsuario;
 
     @Column(name = "c_clave")
-    String cClave;
+    String clave;
 
     @Column(name = "c_usuario")
-    String cUsuario;
+    String codUsuario;
 
     @Column(name = "f_registro")
-    Timestamp fRegistro;
+    Timestamp fechaRegistro;
 
     // bi-directional many-to-one association to MaeRolUsuario
     @OneToMany(mappedBy = "maeUsuario")

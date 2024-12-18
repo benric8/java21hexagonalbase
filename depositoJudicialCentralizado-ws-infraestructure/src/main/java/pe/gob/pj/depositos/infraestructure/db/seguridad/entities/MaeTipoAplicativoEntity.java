@@ -20,13 +20,13 @@ public class MaeTipoAplicativoEntity extends AuditoriaEntity implements Serializ
     private static final long serialVersionUID = 1L;
     @Id
     @Column(name = "n_tipo_aplicativo")
-    Integer nTipoAplicativo;
+    Integer numTipoAplicativo;
 
     @Column(name = "x_descripcion")
-    String xDescripcion;
+    String descripcion;
 
     @Column(name = "x_tipo_aplicativo")
-    String xTipoAplicativo;
+    String tipoAplicativo;
 
     // bi-directional many-to-one association to MaeAplicativo
     @OneToMany(mappedBy = "maeTipoAplicativo")

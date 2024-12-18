@@ -1,10 +1,19 @@
 package pe.gob.pj.depositos.infraestructure.db.seguridad.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import pe.gob.pj.depositos.infraestructure.db.seguridad.entities.MaeRolEntity;
 
 import java.util.List;
 
 public interface MaeRolRepository extends JpaRepository<MaeRolEntity,Integer> {
-    List<MaeRolEntity> findByActivoAndMaeRolUsuariosMaeUsuarioNUsuario(String activo, Integer nUsuario);
+    @Query("""
+            SELECT r FROM MaeRolEntity r
+            JOIN r.maeRolUsuarios ru
+            JOIN ru.maeUsuario u
+            WHERE r.activo = :activo AND u.numUsuario = :nUsuario""")
+    List<MaeRolEntity> findMaeRolEntity(
+          @Param("activo") String activo,
+          @Param("nUsuario")  Integer nUsuario);
 }

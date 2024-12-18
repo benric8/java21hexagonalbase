@@ -20,16 +20,16 @@ public class MaeOperacionEntity extends AuditoriaEntity implements Serializable 
 
     @Id
     @Column(name = "n_operacion")
-    Integer nOperacion;
+    Integer numOperacion;
 
     @Column(name = "x_descripcion")
-    String xDescripcion;
+    String descripcion;
 
     @Column(name = "x_endpoint")
-    String xEndpoint;
+    String endpoint;
 
     @Column(name = "x_operacion")
-    String xOperacion;
+    String operacion;
 
     // bi-directional many-to-one association to MaeAplicativo
     @ManyToOne

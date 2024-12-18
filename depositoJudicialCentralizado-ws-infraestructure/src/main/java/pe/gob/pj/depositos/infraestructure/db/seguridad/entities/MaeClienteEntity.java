@@ -21,19 +21,19 @@ public class MaeClienteEntity extends AuditoriaEntity implements Serializable {
 
     @Id
     @Column(name = "n_cliente")
-    Integer nCliente;
+    Integer numCliente;
 
     @Column(name = "c_cliente")
-    String cCliente;
+    String codCliente;
 
     @Column(name = "l_tipo_cliente")
-    String lTipoCliente;
+    String flagTipoCliente;
 
     @Column(name = "x_cliente")
-    String xCliente;
+    String cliente;
 
     @Column(name = "x_descripcion")
-    String xDescripcion;
+    String descripcion;
 
     // bi-directional many-to-one association to MaeUsuario
     @OneToMany(mappedBy = "maeCliente")
