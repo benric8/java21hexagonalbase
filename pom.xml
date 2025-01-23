@@ -8,12 +8,12 @@
 		<version>3.3.3</version>
 	</parent>
 
-	<groupId>pe.gob.pj.depositos</groupId>
-	<artifactId>depositoJudicialCentralizado-ws-rest</artifactId>
+	<groupId>pe.gob.pj.conexiones</groupId>
+	<artifactId>conexiones-basedatos-api-rest</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
-	<name>Servicio depositos API REST</name>
-	<description>Proyecto de depositos</description>
+	<name>Servicio conexiones basedatos API REST</name>
+	<description>Gestiona las conexiones a las base de datos del Poder Judicial</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -191,8 +191,8 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>depositoJudicialCentralizado-ws-infraestructure</module>
-		<module>depositoJudicialCentralizado-ws-usecase</module>
-		<module>depositoJudicialCentralizado-ws-domain</module>
+		<module>conexiones-basedatos-api-infraestructure</module>
+		<module>conexiones-basedatos-api-usecase</module>
+		<module>conexiones-basedatos-api-domain</module>
 	</modules>
 </project>

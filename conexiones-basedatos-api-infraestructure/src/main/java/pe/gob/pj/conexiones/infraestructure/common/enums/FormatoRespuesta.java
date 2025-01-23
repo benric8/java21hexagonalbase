@@ -1,0 +1,16 @@
+package pe.gob.pj.conexiones.infraestructure.common.enums;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
+public enum FormatoRespuesta {
+
+    XML("XML", "Formato de respuesta xml"),
+    JSON("JSON", "Formato de respuesta json");
+
+    private final String nombre;
+    private final String descripcion;
+
+}
